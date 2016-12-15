@@ -1,6 +1,6 @@
 FROM kdelfour/supervisor-docker
-# Initially was based on work of Christian Lück <christian@lueck.tv>
-MAINTAINER Andreas Löffler <andy@x86dev.com>
+# Based on the work of Andreas Löffler <andy@x86dev.com>
+MAINTAINER Daniel Illi <daniel@illi.zone>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
     nginx git ca-certificates php5-fpm php5-cli php5-curl php5-gd php5-json php5-pgsql
