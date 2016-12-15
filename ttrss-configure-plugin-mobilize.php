@@ -13,7 +13,7 @@ if (!env($ename . '_PORT', '')) {
 }
 
 $config = array();
-$config['DB_TYPE'] = 'pgsql';
+$config['DB_TYPE'] = env($ename . '_TYPE', 'pgsql');
 $config['DB_HOST'] = env($ename . '_PORT_' . $eport . '_TCP_ADDR');
 $config['DB_PORT'] = env($ename . '_PORT_' . $eport . '_TCP_PORT');
 

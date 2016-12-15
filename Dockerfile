@@ -24,6 +24,7 @@ EXPOSE 80
 EXPOSE 443
 
 # expose default database credentials via ENV in order to ease overwriting
+ENV DB_TYPE pgsql
 ENV DB_NAME ttrss
 ENV DB_USER ttrss
 ENV DB_PASS ttrss

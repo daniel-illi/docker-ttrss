@@ -18,9 +18,9 @@ if (!env($ename . '_PORT', '')) {
 }
 
 $config = array();
-$config['DB_TYPE'] = 'pgsql';
-$config['DB_HOST'] = env($ename . '_PORT_' . $eport . '_TCP_ADDR');
-$config['DB_PORT'] = env($ename . '_PORT_' . $eport . '_TCP_PORT');
+$config['DB_TYPE'] = env($ename . '_TYPE', 'pgsql');
+$config['DB_HOST'] = env($ename . '_HOST', env($ename . '_PORT_' . $eport . '_TCP_ADDR'));
+$config['DB_PORT'] = env($ename . '_PORT', env($ename . '_PORT_' . $eport . '_TCP_PORT'));
 
 // database credentials for this instance
 //   database name (DB_NAME) can be supplied or detaults to "ttrss"
